@@ -8,7 +8,7 @@ def list_files_folder (folder):
         files = os.listdir(folder)
         return files, None
     except FileNotFoundError:
-        return None, "Folder does not exist"
+        return None, "The Folder does not exist"
     except PermissionError:
         return None, "You do not have permission to access the folder" 
                                  
