@@ -36,6 +36,19 @@ def explore_forest():
 def cave_option():
     print("\nYou enter the cave and find a treasure chest!")
 
+    choice = input("Do you want to open the chest? (yes/no): ").lower()
+
+    if choice == "yes":
+        add_to_inventory("Silver Sword")
+        print("You found a Silver Sword!")
+        cave_option()
+    elif choice == "no":
+        print("You leave the cave empty-handed.")
+        explore_forest()
+    else:
+        print("Invalid choice. Please chose again.)")
+        cave_option()
+
 def path_option():
     print("\nYou follow the path and discover a village.")
 
